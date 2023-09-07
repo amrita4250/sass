@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    background-color: #a3adb8;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.wrapper {
+    width: 370px;
+    border:3px solid black;
+    border-radius: 3px;
+}
+
+.wrapper .title {
+    background: #007bff;
+    color: rgb(0, 0, 0);
+    line-height: 2.3;
+    border-radius: 2px 2px 0 0;
+    text-align: center;
+    border-bottom:  2px solid black;
+    font-size: 20px;
+}
+
+.wrapper .box {
+    border: 0px solid #020303;
+    padding: 10px 15px;
+    min-height: 400px;
+    max-height: 400px;
+}
+
+.wrapper .box .item {
+    display: flex;
+    float: left;
+    margin: 10px 0;
+}
+
+.wrapper .box .item .icon {
+    background: #007bff;
+    color: rgb(16, 14, 14);
+    width: 40px;
+    border: 1px solid black;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+}
+
+.wrapper .box .item .msg {
+    background: #6b286c;
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    border: 1px solid black;
+    width: 150px;
+    margin-left: 10px;
+     
+}
+
+.wrapper .box .item .msg p {
+    padding: 10px;
+}
+
+.wrapper .box .item.right {
+    float: right;
+}
+
+.wrapper .box .item.right .msg {
+    background: #98529a;
+    color: #000000;
+    border: 1px solid black;
+}
+
+.wrapper .typing-area {
+    width: 100%;
+    background: #918484;
+    border: 0px solid black;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.wrapper .typing-area .input-field {
+    width: 100%;
+    position: relative;
+}
+
+.wrapper .typing-area .input-field input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    outline: none;
+    padding-right: 70px;
+    font-family: 'Poppins', sans-serif;
+    transition: 0.3s all ease;
+}
+
+.wrapper .typing-area .input-field input:focus {
+    border-color: #969fa7;
+}
+
+.wrapper .typing-area .input-field button {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background: transparent;
+    border: 1px solid #5081b5;
+    padding: 5px 10px;
+    border-radius: 3px;
+    color: #007bff;
+    outline: none;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s all ease;
+}
+
+.wrapper .typing-area .input-field button:hover {
+    background: #007bff;
+    color: rgb(15, 11, 11);
+}
+
+.wrapper .typing-area .input-field input:valid ~ button {
+    opacity: 1;
+    pointer-events: auto;
+}
